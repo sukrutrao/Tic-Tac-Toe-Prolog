@@ -10,7 +10,7 @@
 /*
  * To start the game with the blank board, turn number 1, and move number 1
  */
-play:- playHelp([0,0,0,0,0,0,0,0,0],1,1).
+play:- write('\n'),playHelp([0,0,0,0,0,0,0,0,0],1,1).
 
 /*
  * To display the board
@@ -26,7 +26,7 @@ bdisplay(X,I):-I=:=9,nth(I,X,Y),write(' '),write(Y),write('\n\n'),!.
  * To accept input from the user, and store the value Y in position (I,J) in NX, the modified
  * list of X
  */
-addInputUser(X,Y,NX):-read_integer(I),read_integer(J),changeList(X,I,J,Y,NX).
+addInputUser(X,Y,NX):-write('Enter row number:\n'),read_integer(I),write('Enter column number:\n'),read_integer(J),changeList(X,I,J,Y,NX).
 
 /*
  * To change the (I,J)th value of the list with Y and bind it to NX
@@ -114,9 +114,9 @@ checkWin([_,_,A13,_,A22,_,A31,_,_],I):-A31=I,A31=A22,A22=A13.
 /*
  * To display the result based on who wins
  */
-giveResult(0):-write('Draw!').
-giveResult(1):-write('You win!').
-giveResult(2):-write('I win!').
+giveResult(0):-write('Draw!\n').
+giveResult(1):-write('You win!\n').
+giveResult(2):-write('I win!\n').
 
 /*
  * For taking the board X, and modifying it with the computer's move and binding it to NX
