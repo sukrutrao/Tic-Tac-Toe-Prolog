@@ -1,4 +1,7 @@
 # Tic-Tac-Toe-Prolog
+
+[![Build Status](https://travis-ci.com/GoodDeeds/Tic-Tac-Toe-Prolog.svg?token=mYsgPy4zsL5qQDoHBaME&branch=master)](https://travis-ci.com/GoodDeeds/Tic-Tac-Toe-Prolog)
+
 A one player Tic-Tac-Toe Game in Prolog
 
 ### Prerequisites
